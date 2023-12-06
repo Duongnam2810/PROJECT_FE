@@ -1,0 +1,128 @@
+<!-- Container-fluid starts-->
+<!-- <div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="card">
+        <div class="card-header">
+          <div class="row col-12">
+            <div class="col-2">
+              <app-button-create (click)="create()"></app-button-create>
+            </div>
+            <div class="col-10">
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Tìm kiếm..."
+                  (change)="refresh()"
+                  [(ngModel)]="pageModel.strKey"
+                />
+                <span class="custom-search">
+                  <i class="fa fa-search"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="custom-datatable">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col" style="width: 5%">STT</th>
+                  <th scope="col" style="width: 20%">Mã chỉ tiêu</th>
+                  <th scope="col" style="width: 30%">Tên chỉ tiêu</th>
+                  <th scope="col" style="width: 30%">Tên nhóm chỉ tiêu</th>
+                  <th scope="col" style="width: 8%">Trạng thái</th>
+                  <th scope="col" style="width: 10%">Hành động</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of target?.data; let i = index">
+                  <td style="text-align: center">
+                    {{
+                      pageModel.pageSize * (pageModel.currentPage - 1) + i + 1
+                    }}
+                  </td>
+                  <td>{{ item.code }}</td>
+                  <td>{{ item.name }}</td>
+                  <td>{{ getAllDmGroupTarget(item.groupTargetId) }}</td>
+                  <td>
+                    <mat-slide-toggle
+                      class="example-margin"
+                      [(ngModel)]="isCheck"
+                      name="isCheck"
+                      [disabled]="disabled"
+                    >
+                      <p *ngIf="item.status === 1">Sử dụng</p>
+                      <p *ngIf="item.status !== 1">Không sử dụng</p>
+                    </mat-slide-toggle>
+                  </td>
+                  <td style="text-align: center">
+                    <div
+                      ngbDropdown
+                      class="d-inline-block"
+                      style="display: contents !important"
+                    >
+                      <button
+                        type="button"
+                        class="btn btn-outline-primary"
+                        id="dropdownIndexClass"
+                        ngbDropdownToggle
+                      >
+                        Hành động
+                      </button>
+                      <div ngbDropdownMenu aria-labelledby="dropdownIndexClass">
+                        <button
+                          ngbDropdownItem
+                          (click)="editAndDetail(item, false)"
+                        >
+                          <app-icon-info style="cursor: pointer"></app-icon-info
+                          >&nbsp;Xem chi tiết
+                        </button>
+                        <button
+                          ngbDropdownItem
+                          (click)="editAndDetail(item, true)"
+                        >
+                          <app-icon-modify
+                            style="cursor: pointer"
+                          ></app-icon-modify>
+                          &nbsp;Cập nhật
+                        </button>
+                        <button ngbDropdownItem (click)="delete(item)">
+                          <app-icon-delete></app-icon-delete>&nbsp;Xoá
+                        </button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr *ngIf="target?.totalRecord === 0">
+                  <td colspan="6">Không có dữ liệu</td>
+                </tr>
+              </tbody>
+            </table>
+            <div
+              class="d-flex justify-content-center p-2"
+              style="float: left; align-items: center"
+            >
+              <p>Tổng số bản ghi: {{ target.data?.length }}</p>
+            </div>
+            <div
+              *ngIf="target && target.data && target.data?.length > 0"
+              class="d-flex justify-content-center p-2"
+              style="float: right"
+            >
+              <ngx-panging
+                [currentPage]="pageModel.currentPage"
+                (pageChange)="changePage($event)"
+                [totalPages]="target?.totalPage"
+                (pageSize)="changeSize($event)"
+              ></ngx-panging>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- Container-fluid Ends-->

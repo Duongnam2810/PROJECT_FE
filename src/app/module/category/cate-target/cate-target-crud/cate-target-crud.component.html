@@ -1,0 +1,121 @@
+<!-- eslint-disable @angular-eslint/template/label-has-associated-control -->
+<!-- Container-fluid starts-->
+<!-- <nav class="navbar navbar-dark bg-primary" style="padding: 10px">
+  <p class="navbar-brand" *ngIf="fromParent.model === null">
+    Thêm mới chỉ tiêu
+  </p>
+  <p class="navbar-brand" *ngIf="fromParent.model !== null && isCheck">
+    Cập nhật chỉ tiêu
+  </p>
+  <p class="navbar-brand" *ngIf="!isCheck">Chi tiết chỉ tiêu</p>
+  <button
+    type="button"
+    (click)="onClose(false)"
+    class="btn btn-light"
+    aria-label="Close"
+  >
+    <span aria-hidden="true">&times;</span>
+  </button>
+</nav>
+
+<div class="container-fluid">
+  <form #frm="ngForm">
+    <div class="row modal-body">
+      <div class="card">
+        <div class="row form-group col-sm-12 col-md-12 col-xs-12 col-lg-12">
+          <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6">
+            <label class="required">Mã chỉ tiêu</label>
+            <input
+              placeholder="Nhập mã chỉ tiêu"
+              required
+              type="text"
+              [disabled]="!isCheck"
+              class="form-control"
+              name="code"
+              [(ngModel)]="target.code"
+              maxlength="250"
+            />
+          </div>
+          <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6">
+            <label class="required">Tên chỉ tiêu</label>
+            <input
+              placeholder="Nhập tên chỉ tiêu"
+              required
+              type="text"
+              [disabled]="!isCheck"
+              class="form-control"
+              name="name"
+              [(ngModel)]="target.name"
+              maxlength="500"
+            />
+          </div>
+        </div>
+        <div class="row form-group col-sm-12 col-md-12 col-xs-12 col-lg-12">
+          <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6">
+            <label class="required">Trạng thái</label>
+            <ng-select
+              required
+              [disabled]="!isCheck"
+              placeholder="Chọn trạng thái"
+              name="lstStatus"
+              [items]="lstStatus"
+              autofocus
+              bindLabel="name"
+              bindValue="id"
+              [(ngModel)]="target.status"
+            >
+            </ng-select>
+          </div>
+          <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6">
+            <label class="required">Nhóm chỉ tiêu</label>
+            <ng-select
+              [disabled]="!isCheck"
+              placeholder="Chọn người vận chuyển"
+              name="name"
+              [items]="lstGroupDmTarget"
+              bindLabel="name"
+              bindValue="id"
+              [(ngModel)]="target.groupTargetId"
+            >
+            </ng-select>
+          </div>
+          <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6">
+            <label>Ngày ban hành</label>
+            <input
+              type="date"
+              [disabled]="!isCheck"
+              class="form-control"
+              name="publishDate"
+              [(ngModel)]="target.publishDate"
+            />
+          </div>
+        </div>
+        <div class="row col-sm-12 col-md-12 col-xs-12 col-lg-12">
+          <div class="col-sm-12 col-md-12 col-xs-12 col-lg-12">
+            <label>Ghi chú</label>
+            <textarea
+              placeholder="Nhập ghi chú"
+              rows="5"
+              type="text"
+              [disabled]="!isCheck"
+              class="form-control"
+              name="note"
+              [(ngModel)]="target.note"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row modal-footer" style="padding: 20px">
+      <div class="col-12 text-end">
+        <app-button-save
+          *ngIf="isCheck"
+          [disabled]="!frm.valid"
+          (click)="onSave()"
+        ></app-button-save>
+        <app-button-close (click)="onClose(false)"></app-button-close>
+      </div>
+    </div>
+  </form>
+</div> -->

@@ -1,0 +1,12 @@
+<div class="card">
+    <div class="card-header">
+        <h2 class="card-title" style="color: red;vertical-align: middle; margin: auto; font-size: 29px;">{{model.title}}</h2>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"><i style="color: #ffd43b;font-size: 25px;" class="fa-solid fa-triangle-exclamation"></i>&nbsp;{{model.message}}?</li>
+    </ul>
+    <div class="card-footer text-end">
+        <app-button-save title="Lưu" (click)="close(true)"></app-button-save>&nbsp;
+        <app-button-close (click)="close(false)"></app-button-close>
+    </div>
+</div>

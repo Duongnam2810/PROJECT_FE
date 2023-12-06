@@ -1,0 +1,124 @@
+
+// @import "~@ng-select/ng-select/themes/material.theme.css";
+@import "~@ng-select/ng-select/themes/default.theme.css";
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.app-modal-window-98 .modal-dialog {
+    --bs-modal-width: 98%;
+    font-size: 12px;
+}
+
+.app-modal-window-70 .modal-dialog {
+    --bs-modal-width: 70%;
+    font-size: 12px;
+}
+
+.app-modal-window-30 .modal-dialog {
+    --bs-modal-width: 30%;
+    font-size: 12px;
+}
+
+.app-modal-window-50 .modal-dialog {
+    --bs-modal-width: 50%;
+    font-size: 12px;
+}
+
+.required:after {
+    content: " (*)";
+    color: red;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 900;
+}
+
+
+.k-dialog-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        outline: 0;
+        position: fixed;
+        top: 0;
+        left: 5%;
+        width: 100%;
+        height: 100%;
+        z-index: 10001;
+    }
+
+kendo-grid th .k-column-title {
+  text-align: center !important;
+  white-space: initial !important;
+}
+
+.k-grid .k-cell-inner > .k-link {
+    width: auto;
+    display: grid !important;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: inherit;
+    flex: 1;
+    overflow: hidden;
+}
+
+.custom-search {
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: -35px;
+    i {
+        font-size: 18px;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 1px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+ng-select.custom {
+    border:0px;
+    min-height: 0px;
+    border-radius: 0;
+        font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+.ng-select.custom .ng-select-container  {            
+    min-height: 0px;
+    border-radius: 0;
+}
+
+.ng-select{
+        font-family: sans-serif;
+    font-size: 14px;
+}
+
+    .fiel {
+        border: 1px solid darkgrey;
+        padding-top: 7px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+    }
+
+    .lege {
+        text-align: -webkit-center;
+        border-bottom: hidden;
+        border: 1px solid green;
+        color: green;
+        font-size: 100%;
+        width: 20vw;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    span{
+        font-size: 14px;
+        line-height: 1.5rem;
+    }
